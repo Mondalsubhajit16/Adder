@@ -1,0 +1,50 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Feb 14, 2023 at 05:24:41 IST
+irun
+	-access +rwc
+	Adder_tb.sv
+	../adder.v
+file: Adder_tb.sv
+	module worklib.Adder_tb:sv
+		errors: 0, warnings: 0
+file: ../adder.v
+    input logic resetn,       // Active low reset signal
+                     |
+ncvlog: *E,EXPCORP (../adder.v,2|21): Expecting a ',' or ')' [A.1.4(IEEE-2001)].
+    input logic resetn,       // Active low reset signal
+                     |
+ncvlog: *E,EXPCORP (../adder.v,2|21): Expecting a ',' or ')' [12.3.2(IEEE)].
+    input logic [1:0] A,      // First 2-bit number
+                |
+ncvlog: *E,EXPCORP (../adder.v,3|16): Expecting a ',' or ')' [A.1.4(IEEE-2001)].
+    input logic [1:0] A,      // First 2-bit number
+                |
+ncvlog: *E,EXPCORP (../adder.v,3|16): Expecting a ',' or ')' [12.3.2(IEEE)].
+    input logic [1:0] B,      // Second 2-bit number
+                |
+ncvlog: *E,EXPCORP (../adder.v,4|16): Expecting a ',' or ')' [A.1.4(IEEE-2001)].
+    input logic [1:0] B,      // Second 2-bit number
+                |
+ncvlog: *E,EXPCORP (../adder.v,4|16): Expecting a ',' or ')' [12.3.2(IEEE)].
+    output logic [2:0] out    // 3-bit result (to include carry)
+                 |
+ncvlog: *E,EXPCORP (../adder.v,5|17): Expecting a ',' or ')' [A.1.4(IEEE-2001)].
+    output logic [2:0] out    // 3-bit result (to include carry)
+                 |
+ncvlog: *E,EXPCORP (../adder.v,5|17): Expecting a ',' or ')' [12.3.2(IEEE)].
+    always_comb begin
+                    |
+ncvlog: *E,EXPLPA (../adder.v,7|20): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
+            out = 0;
+              |
+ncvlog: *E,EXPSMC (../adder.v,9|14): expecting a semicolon (';') [12.1.2][7.1(IEEE)].
+            out = 0;
+                |
+ncvlog: *E,EXPLPA (../adder.v,9|16): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
+        else
+           |
+ncvlog: *E,EXPENM (../adder.v,10|11): expecting the keyword 'endmodule' [12.1(IEEE)].
+	module worklib.adder:v
+		errors: 12, warnings: 0
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 14, 2023 at 05:24:41 IST  (total: 00:00:00)

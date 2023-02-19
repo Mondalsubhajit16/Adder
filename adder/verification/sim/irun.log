@@ -1,0 +1,184 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Feb 18, 2023 at 15:44:31 IST
+irun
+	-access +rwc
+	-f compile_list.f
+		../../RTL/adder.sv
+		../uvme/top/adder_if.sv
+		../uvme/package/adder_pkg.sv
+		../uvme/top/adder_top.sv
+	-uvmhome CDNS-1.1d
+	+UVM_TESTNAME=adder_sum_test
+Recompiling... reason: file '../uvme/top/adder_top.sv' is newer than expected.
+	expected: Sat Feb 18 15:43:28 2023
+	actual:   Sat Feb 18 15:44:02 2023
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+file: ../uvme/package/adder_pkg.sv
+package adder_pkg;
+                |
+ncvlog: *W,TSNSPK (../uvme/package/adder_pkg.sv,1|16): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+file: ../uvme/top/adder_top.sv
+	module worklib.adder_top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		adder_pkg
+		axi_if
+		adder_top
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.adder_pkg:sv <0x67acfdaf>
+			streams:  24, words: 29965
+		worklib.adder_top:sv <0x24fb2494>
+			streams:  74, words: 137338
+		worklib.uvm_pkg:sv <0x0f4ae6c7>
+			streams:  24, words: 26554
+		worklib.uvm_pkg:sv <0x261e376f>
+			streams:  24, words: 27004
+		worklib.uvm_pkg:sv <0x297b6f91>
+			streams:  24, words: 26554
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       2       2
+		Interfaces:                    2       2
+		Verilog packages:              5       5
+		Registers:                 14418   10293
+		Scalar wires:                  1       -
+		Vectored wires:                5       -
+		Named events:                  4      12
+		Initial blocks:              306     162
+		Parallel blocks:              26      27
+		Cont. assignments:             1       1
+		Pseudo assignments:            4       4
+		Assertions:                    7       7
+		SV Class declarations:       205     319
+		SV Class specializations:    399     399
+	Writing initial simulation snapshot: worklib.axi_if:sv
+Loading snapshot worklib.axi_if:sv .................... Done
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> source /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-s051)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test adder_sum_test...
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               adder_sum_test          -     @2671
+  envh                     adder_env               -     @2736
+    agt                    adder_agent             -     @2786
+      drvh                 adder_driver            -     @2929
+        rsp_port           uvm_analysis_port       -     @3079
+        seq_item_port      uvm_seq_item_pull_port  -     @3028
+      monh                 adder_monitor           -     @2901
+        adder_port         uvm_analysis_port       -     @2949
+      seqrh                adder_sequencer         -     @3058
+        rsp_export         uvm_analysis_export     -     @3167
+        seq_item_export    uvm_seq_item_pull_imp   -     @3715
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    sb                     adder_scoreboard        -     @2816
+      item_collect_export  uvm_analysis_imp        -     @2865
+--------------------------------------------------------------
+
+UVM_INFO ../uvme/sequences/adder_sum_sequence.sv(18) @ 0: uvm_test_top.envh.agt.seqrh@@seqh [adder_sum_sequence] start item 
+UVM_INFO ../uvme/sequences/adder_sum_sequence.sv(21) @ 0: uvm_test_top.envh.agt.seqrh@@seqh [adder_sum_sequence] random sequence send
+UVM_INFO ../uvme/sequences/adder_sum_sequence.sv(24) @ 0: uvm_test_top.envh.agt.seqrh@@seqh [adder_sum_sequence] random sequence send
+UVM_INFO ../uvme/adder_agent/adder_driver.sv(39) @ 0: uvm_test_top.envh.agt.drvh [adder_driver] driving start with get next item
+UVM_INFO ../uvme/adder_agent/adder_driver.sv(51) @ 0: uvm_test_top.envh.agt.drvh [adder_driver] inside the driver body
+UVM_INFO ../uvme/adder_agent/adder_driver.sv(55) @ 0: uvm_test_top.envh.agt.drvh [ADDER_DRIVER] printing from Driver 
+ ----------------------------------------------------------------------------------------
+Name                           Type               Size  Value                           
+----------------------------------------------------------------------------------------
+req                            adder_transaction  -     @3801                           
+  ip1                          integral           2     'h1                             
+  ip2                          integral           2     'h3                             
+  out                          integral           3     'h0                             
+  resetn                       integral           1     'h1                             
+  begin_time                   time               64    0                               
+  depth                        int                32    'd2                             
+  parent sequence (name)       string             4     seqh                            
+  parent sequence (full name)  string             32    uvm_test_top.envh.agt.seqrh.seqh
+  sequencer                    string             27    uvm_test_top.envh.agt.seqrh     
+----------------------------------------------------------------------------------------
+
+UVM_INFO ../uvme/adder_agent/adder_driver.sv(44) @ 0: uvm_test_top.envh.agt.drvh [adder_driver] driving end with item done
+UVM_INFO ../uvme/sequences/adder_sum_sequence.sv(27) @ 0: uvm_test_top.envh.agt.seqrh@@seqh [adder_sum_sequence] finish item
+UVM_INFO ../uvme/adder_agent/adder_monitor.sv(55) @ 1: uvm_test_top.envh.agt.monh [ADDER_MONITOR] printing from Monitor 
+ ----------------------------------------
+Name      Type               Size  Value
+----------------------------------------
+mon_item  adder_transaction  -     @3921
+  ip1     integral           2     'h1  
+  ip2     integral           2     'h3  
+  out     integral           3     'h4  
+  resetn  integral           1     'h1  
+----------------------------------------
+
+------------------------------------------------------------------
+UVM_INFO ../uvme/env/adder_scoreboard.sv(35) @ 1: uvm_test_top.envh.sb [adder_scoreboard] Matched: ip1 = 1, ip2 = 3, out = 4
+------------------------------------------------------------------
+UVM_INFO /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 10: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   13
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[ADDER_DRIVER]     1
+[ADDER_MONITOR]     1
+[RNTST]     1
+[TEST_DONE]     1
+[UVMTOP]     1
+[adder_driver]     3
+[adder_scoreboard]     1
+[adder_sum_sequence]     4
+Simulation complete via $finish(1) at time 10 NS + 44
+/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Feb 18, 2023 at 15:44:33 IST  (total: 00:00:02)
